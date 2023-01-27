@@ -21,7 +21,6 @@ import "./App.css";
 // User can see updated list of messages that includes their message
 
 // TODO
-// * add a button to fetch messages from the server
 // * add graphQL server
 // * request messages from the server
 // * store them in context and access them from the GuestBook component
