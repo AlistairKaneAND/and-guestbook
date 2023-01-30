@@ -1,6 +1,6 @@
 export default function GuestBookForm({ submitHandler }) {
   return (
-    <section>
+    <section className="form-section">
       <h2>Leave a message</h2>
       <form onSubmit={submitHandler} className="submit-form">
         <label htmlFor="name" className="form-element">

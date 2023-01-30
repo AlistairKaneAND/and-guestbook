@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -34,6 +33,8 @@
 
 .App {
   display: flex;
+  height: 50rem;
+  width: 50rem;
 }
 
 .card {
@@ -59,13 +60,17 @@
   padding-top: 1rem;
 }
 
+.left-stack {
+  height: 100%;
+}
+
 .left-pane {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   background-color: rgb(112, 128, 144);
-  height: 22rem;
+  height: 100%;
 }
 
 .bottom-left-pane {
@@ -74,6 +79,7 @@
   align-items: center;
   padding: 1rem;
   background-color: rgb(54, 69, 79);
+  width: 100%;
 }
 
 .guest-book {
@@ -82,14 +88,15 @@
   align-items: center;
   padding: 1rem;
   background-color: rgb(83, 104, 114);
-  width: 30rem;
-  height: 26.7rem;
+  height: 100%;
+  width: 100%;
 }
 
 .messages {
   background-color: rgb(15, 39, 40);
   height: 100%;
   width: 100%;
+  overflow: scroll;
 }
 
 .message {
@@ -115,12 +122,17 @@
 }
 
 .message-content {
-  height: 5rem;
+  padding: 1rem;
   overflow: scroll;
+  text-align: left;
 } 
 
 .form-text-area {
   overflow-y: scroll;
-  height: 4rem;
+  height: 25rem;
   resize: none;
+}
+
+.form-section {
+  height: 100%;
 }

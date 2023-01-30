@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite serve",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-graphql-server db.cjs"
   },
   "dependencies": {
+    "json-graphql-server": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

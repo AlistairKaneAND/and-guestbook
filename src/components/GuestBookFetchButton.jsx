@@ -1,5 +1,5 @@
 export default function GuestBookFetchButton({ clickHandler }) {
     return (
-        <button onClick={clickHandler}>Update</button>
+        <button className="fetch-button" onClick={clickHandler}>Update</button>
     )
 }
