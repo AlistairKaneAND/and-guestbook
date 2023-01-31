@@ -1,0 +1,24 @@
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.form-element {
+  padding-top: 1rem;
+}
+
+.form-section {
+  height: 100%;
+}
+
+.form-text-area {
+  overflow-y: scroll;
+  height: 25rem;
+  resize: none;
+}

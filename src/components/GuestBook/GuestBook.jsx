@@ -1,23 +1,24 @@
-import { useMessages } from "../useMessages";
+import { useMessages } from "../../useMessages";
+import styles from "./GuestBook.module.css";
 
 export default function GuestBook() {
   const { messages } = useMessages();
 
   return (
-    <div className="guest-book">
+    <div className={styles['guest-book']}>
       <h3>Guest Book</h3>
-      <div className="messages">
+      <div className={styles.messages}>
         {messages &&
           messages.map((entry) => {
             const { timestamp, name, message, link } = entry;
 
             return (
-              <div className="message" key={timestamp}>
-                <div className="message-heading">
-                  <span className="message-name">{name}</span>
+              <div className={styles.message} key={timestamp}>
+                <div className={styles['message-heading']}>
+                  <span className={styles['message-name']}>{name}</span>
                   <span>{timestamp}</span>
                 </div>
-                <div className="message-content">
+                <div className={styles['message-content']}>
                   <p>{message}</p>
                   <a href={link}>{link}</a>
                 </div>

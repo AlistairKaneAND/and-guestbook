@@ -1,13 +1,9 @@
 import { useReducer } from "react";
 import "./App.css";
-import GuestBook from "./components/GuestBook";
-import GuestBookFetchButton from "./components/GuestBookFetchButton";
-import GuestBookForm from "./components/GuestBookForm";
+import GuestBook from "./components/GuestBook/GuestBook";
+import GuestBookFetchButton from "./components/GuestBookFetchButton/GuestBookFetchButton";
+import GuestBookForm from "./components/GuestBookForm/GuestBookForm";
 import { MessageActionTypes, useMessages } from "./useMessages";
-
-// TODO
-// * post new message to server (can use GraphQL $now function for timestamp ?) using useReducer
-// * add tests Jest + React Testing Library
 
 function App() {
   const { dispatch, requestGuestbookEntries } = useMessages();
@@ -19,7 +15,6 @@ function App() {
     const message = event.currentTarget.elements.message.value;
     const timestamp = new Date().toUTCString();
 
-    // add the message to the collection
     const payload = {
       name,
       link,
