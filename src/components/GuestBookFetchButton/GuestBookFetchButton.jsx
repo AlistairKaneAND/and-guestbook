@@ -1,5 +1,8 @@
-export default function GuestBookFetchButton({ clickHandler }) {
-    return (
-        <button onClick={clickHandler}>Update</button>
-    )
+import { useMessages } from "../../message-utils.jsx";
+
+export default function GuestBookFetchButton({}) {
+  const { updateGuestbookEntries } = useMessages();
+  return (
+    <button onClick={updateGuestbookEntries}>Update</button>
+  );
 }

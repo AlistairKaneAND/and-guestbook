@@ -1,4 +1,4 @@
-import { useMessages } from "../../useMessages";
+import { useMessages } from "../../message-utils";
 import styles from "./GuestBook.module.css";
 
 export default function GuestBook() {

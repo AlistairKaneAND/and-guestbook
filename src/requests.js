@@ -1,4 +1,4 @@
-export const getGuestbookEntries = async () => {
+export const fetchGuestbookEntries = async () => {
   return fetch("http://localhost:3000/graphql", {
     method: "POST",
     headers: {
@@ -16,7 +16,11 @@ export const getGuestbookEntries = async () => {
           }
             `,
     }),
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .catch((err) => {
+      throw new Error(err);
+    });
 };
 
 export const postNewGuestbookEntry = async ({
@@ -48,5 +52,9 @@ export const postNewGuestbookEntry = async ({
         timestamp,
       },
     }),
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .catch((err) => {
+      throw new Error(err);
+    });
 };
